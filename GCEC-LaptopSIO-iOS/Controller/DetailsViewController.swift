@@ -30,10 +30,12 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         
-        print("DetailsViewController: \(_sentIncident.name)")
         incidentDetails.append(Detail(title: "Name", detail: _sentIncident.name))
         incidentDetails.append(Detail(title: "Location", detail: _sentIncident.location))
         incidentDetails.append(Detail(title: "Asset", detail: _sentIncident.asset))
+        incidentDetails.append(Detail(title: "Type", detail: _sentIncident.deviceType))
+        incidentDetails.append(Detail(title: "Model", detail: _sentIncident.deviceModel))
+        incidentDetails.append(Detail(title: "School", detail: _sentIncident.deviceSchool))
         
     }
     

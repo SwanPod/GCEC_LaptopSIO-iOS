@@ -42,11 +42,11 @@ class IncidentListViewController: UIViewController, UITableViewDelegate, UITable
         
         self.tableView.rowHeight = 74
         
-        let inc1 = Incident(name: "TI-1104-04", location: "Data Center", asset: "08317")
-        let inc2 = Incident(name: "RI-S103-24", location: "Tech Office", asset: "03415")
-        let inc3 = Incident(name: "EI-W124-06", location: "Tech Office", asset: "02745")
-        let inc4 = Incident(name: "CI-300-S03", location: "HP Service", asset: "09376")
-        let inc5 = Incident(name: "TI-1206-05", location: "Data Center", asset: "06284")
+        let inc1 = Incident(name: "TI-1101-04", location: "Data Center", asset: "08317", deviceType: "Laptop", deviceModel: "645", deviceSchool: "GCIT")
+        let inc2 = Incident(name: "RI-S103-24", location: "Tech Office", asset: "03415", deviceType: "Laptop", deviceModel: "6465b", deviceSchool: "BBR")
+        let inc3 = Incident(name: "EI-W124-06", location: "Tech Office", asset: "02745", deviceType: "Laptop", deviceModel: "x360", deviceSchool: "BBE")
+        let inc4 = Incident(name: "CI-300-S03", location: "HP Service", asset: "09376", deviceType: "Desktop", deviceModel: "6005", deviceSchool: "BDC")
+        let inc5 = Incident(name: "TI-1206-05", location: "Data Center", asset: "06284", deviceType: "Laptop", deviceModel: "G2", deviceSchool: "GCIT")
         
         incidents.append(inc1)
         incidents.append(inc2)
@@ -67,7 +67,6 @@ class IncidentListViewController: UIViewController, UITableViewDelegate, UITable
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? DetailsViewController {
             if let sendingIncident = sender as? Incident {
-                print("IncidentListViewController: \(sendingIncident.name)")
                 destination.sentIncident = sendingIncident
             }
         }
