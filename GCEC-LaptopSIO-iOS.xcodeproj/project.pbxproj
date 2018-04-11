@@ -15,6 +15,8 @@
 		94624768207E7A75002F85E6 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94624767207E7A75002F85E6 /* ScanViewController.swift */; };
 		9462476B207E7B3D002F85E6 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94624769207E7B3C002F85E6 /* Roboto-Regular.ttf */; };
 		9462476C207E7B3D002F85E6 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9462476A207E7B3D002F85E6 /* Roboto-Light.ttf */; };
+		94624773207E8190002F85E6 /* IncidentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94624772207E8190002F85E6 /* IncidentTableViewCell.swift */; };
+		94FB77D2207E834B003EF1BC /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB77D1207E834B003EF1BC /* Incident.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		94624767207E7A75002F85E6 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		94624769207E7B3C002F85E6 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		9462476A207E7B3D002F85E6 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		94624772207E8190002F85E6 /* IncidentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentTableViewCell.swift; sourceTree = "<group>"; };
+		94FB77D1207E834B003EF1BC /* Incident.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incident.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 		94624763207E7A2E002F85E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				94624772207E8190002F85E6 /* IncidentTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -92,6 +97,7 @@
 		94624764207E7A32002F85E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				94FB77D1207E834B003EF1BC /* Incident.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,6 +187,8 @@
 				94624766207E7A64002F85E6 /* IncidentListViewController.swift in Sources */,
 				94624751207E7728002F85E6 /* AppDelegate.swift in Sources */,
 				94624768207E7A75002F85E6 /* ScanViewController.swift in Sources */,
+				94624773207E8190002F85E6 /* IncidentTableViewCell.swift in Sources */,
+				94FB77D2207E834B003EF1BC /* Incident.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
