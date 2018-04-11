@@ -29,6 +29,10 @@ class IncidentListViewController: UIViewController, UITableViewDelegate, UITable
         }
     }
     
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
