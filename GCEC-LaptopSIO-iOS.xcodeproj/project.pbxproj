@@ -13,6 +13,8 @@
 		9462475B207E772B002F85E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94624759207E772B002F85E6 /* LaunchScreen.storyboard */; };
 		94624766207E7A64002F85E6 /* IncidentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94624765207E7A64002F85E6 /* IncidentListViewController.swift */; };
 		94624768207E7A75002F85E6 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94624767207E7A75002F85E6 /* ScanViewController.swift */; };
+		9462476B207E7B3D002F85E6 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94624769207E7B3C002F85E6 /* Roboto-Regular.ttf */; };
+		9462476C207E7B3D002F85E6 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9462476A207E7B3D002F85E6 /* Roboto-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9462475C207E772B002F85E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94624765207E7A64002F85E6 /* IncidentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentListViewController.swift; sourceTree = "<group>"; };
 		94624767207E7A75002F85E6 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		94624769207E7B3C002F85E6 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		9462476A207E7B3D002F85E6 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		9462474F207E7728002F85E6 /* GCEC-LaptopSIO-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				9462476D207E7B40002F85E6 /* Fonts */,
 				94624764207E7A32002F85E6 /* Model */,
 				94624763207E7A2E002F85E6 /* View */,
 				94624762207E7A2A002F85E6 /* Controller */,
@@ -89,6 +94,15 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9462476D207E7B40002F85E6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9462476A207E7B3D002F85E6 /* Roboto-Light.ttf */,
+				94624769207E7B3C002F85E6 /* Roboto-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +165,8 @@
 			files = (
 				9462475B207E772B002F85E6 /* LaunchScreen.storyboard in Resources */,
 				94624758207E772B002F85E6 /* Assets.xcassets in Resources */,
+				9462476C207E7B3D002F85E6 /* Roboto-Light.ttf in Resources */,
+				9462476B207E7B3D002F85E6 /* Roboto-Regular.ttf in Resources */,
 				94624756207E7728002F85E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
