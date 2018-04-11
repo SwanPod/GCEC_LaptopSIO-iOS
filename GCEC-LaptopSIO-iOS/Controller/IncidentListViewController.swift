@@ -13,6 +13,7 @@ class IncidentListViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var tableView: UITableView!
     
     let cellIdentifier = "incidentCell"
+    let detailsSegueIdentifier = "segueShowDetails"
     var incidents = [Incident]()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,15 +59,18 @@ class IncidentListViewController: UIViewController, UITableViewDelegate, UITable
         super.didReceiveMemoryWarning()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedIncident = incidents[indexPath.row]
+        performSegue(withIdentifier: detailsSegueIdentifier, sender: selectedIncident)
     }
-    */
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailsViewController {
+            if let sendingIncident = sender as? Incident {
+                print("IncidentListViewController: \(sendingIncident.name)")
+                destination.sentIncident = sendingIncident
+            }
+        }
+    }
 
 }
