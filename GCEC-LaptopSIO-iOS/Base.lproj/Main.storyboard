@@ -168,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2gw-ph-DKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2261.5999999999999" y="554.57271364317842"/>
+            <point key="canvasLocation" x="2338" y="526"/>
         </scene>
         <!--Incident List View Controller-->
         <scene sceneID="uLo-1T-Fh5">
@@ -341,7 +341,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SBa-K2-RL7">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="514"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" textLabel="Qh0-z2-oET" detailTextLabel="jUc-Db-xKi" rowHeight="45" style="IBUITableViewCellStyleValue1" id="TX8-H5-hTg" customClass="ListItemTableViewCell" customModule="GCEC_LaptopSIO_iOS" customModuleProvider="target">
@@ -374,11 +374,34 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T1L-jc-pvK" customClass="BorderUIView" customModule="GCEC_LaptopSIO_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="578" width="375" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMd-u1-qKn">
+                                        <rect key="frame" x="8" y="5" width="359" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="359" id="TTz-Zf-77Y"/>
+                                            <constraint firstAttribute="height" constant="30" id="m6F-6j-96Z"/>
+                                        </constraints>
+                                        <state key="normal" title="SIGN OUT"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="TMd-u1-qKn" firstAttribute="centerY" secondItem="T1L-jc-pvK" secondAttribute="centerY" id="EDr-JG-wCE"/>
+                                    <constraint firstItem="TMd-u1-qKn" firstAttribute="centerX" secondItem="T1L-jc-pvK" secondAttribute="centerX" id="Huc-u1-MXt"/>
+                                    <constraint firstAttribute="width" constant="375" id="XEQ-kH-xs6"/>
+                                    <constraint firstAttribute="height" constant="40" id="dbO-8j-JJn"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="T1L-jc-pvK" firstAttribute="top" secondItem="SBa-K2-RL7" secondAttribute="bottom" id="J1c-rX-lV3"/>
+                            <constraint firstItem="T1L-jc-pvK" firstAttribute="leading" secondItem="q38-3G-fuA" secondAttribute="leading" id="Lgu-zQ-LoO"/>
                             <constraint firstItem="SBa-K2-RL7" firstAttribute="top" secondItem="q38-3G-fuA" secondAttribute="top" id="TUe-WL-C52"/>
-                            <constraint firstItem="q38-3G-fuA" firstAttribute="bottom" secondItem="SBa-K2-RL7" secondAttribute="bottom" id="ira-an-yQT"/>
+                            <constraint firstItem="T1L-jc-pvK" firstAttribute="bottom" secondItem="q38-3G-fuA" secondAttribute="bottom" id="gVE-cv-EmK"/>
+                            <constraint firstItem="T1L-jc-pvK" firstAttribute="trailing" secondItem="q38-3G-fuA" secondAttribute="trailing" id="sty-ae-w4E"/>
                             <constraint firstItem="q38-3G-fuA" firstAttribute="trailing" secondItem="SBa-K2-RL7" secondAttribute="trailing" id="www-kd-g19"/>
                             <constraint firstItem="SBa-K2-RL7" firstAttribute="leading" secondItem="q38-3G-fuA" secondAttribute="leading" id="x6c-gD-Nqd"/>
                         </constraints>
@@ -409,13 +432,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnSignOut" destination="TMd-u1-qKn" id="NG4-Vd-Jsi"/>
                         <outlet property="tableView" destination="SBa-K2-RL7" id="Dp1-9e-0H8"/>
                         <segue destination="jdm-lF-TQO" kind="show" identifier="segueShowEdit" id="AuM-Jr-v36"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RIv-qc-gyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2108" y="-245"/>
+            <point key="canvasLocation" x="2108" y="-245.12743628185908"/>
         </scene>
     </scenes>
     <resources>

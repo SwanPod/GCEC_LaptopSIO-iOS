@@ -11,6 +11,7 @@ import UIKit
 class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var btnSignOut: UIButton!
     
     let cellIdentifier = "detailCell"
     let showEditSegueIdentifier = "segueShowEdit"
@@ -38,6 +39,8 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         incidentDetails.append(Detail(title: "Type", detail: _sentIncident.deviceType))
         incidentDetails.append(Detail(title: "Model", detail: _sentIncident.deviceModel))
         incidentDetails.append(Detail(title: "School", detail: _sentIncident.deviceSchool))
+        
+        btnSignOut.setTitle("Sign Out \(_sentIncident.name)", for: .normal)
         
     }
     
