@@ -22,6 +22,7 @@ class AddDeviceViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = false
+        tableView.rowHeight = 45
         
         if screenTypeEdit == true {
             lblScreenTitle.text = "Edit Device"
