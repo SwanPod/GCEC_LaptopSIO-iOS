@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		944BE06D207F8A8A001377D0 /* AddDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944BE06C207F8A8A001377D0 /* AddDetailTableViewCell.swift */; };
 		944C624A207EA910003B732E /* ListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944C6249207EA910003B732E /* ListItemTableViewCell.swift */; };
 		944C624E207EAE1B003B732E /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944C624D207EAE1B003B732E /* Detail.swift */; };
 		944C6250207EB978003B732E /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944C624F207EB978003B732E /* DetailsViewController.swift */; };
@@ -19,10 +20,12 @@
 		9462476B207E7B3D002F85E6 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94624769207E7B3C002F85E6 /* Roboto-Regular.ttf */; };
 		9462476C207E7B3D002F85E6 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9462476A207E7B3D002F85E6 /* Roboto-Light.ttf */; };
 		94624773207E8190002F85E6 /* IncidentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94624772207E8190002F85E6 /* IncidentTableViewCell.swift */; };
+		94C62C88207F795A008F0CAB /* AddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C62C87207F795A008F0CAB /* AddDeviceViewController.swift */; };
 		94FB77D2207E834B003EF1BC /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB77D1207E834B003EF1BC /* Incident.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		944BE06C207F8A8A001377D0 /* AddDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailTableViewCell.swift; sourceTree = "<group>"; };
 		944C6249207EA910003B732E /* ListItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemTableViewCell.swift; sourceTree = "<group>"; };
 		944C624D207EAE1B003B732E /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		944C624F207EB978003B732E /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +40,7 @@
 		94624769207E7B3C002F85E6 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		9462476A207E7B3D002F85E6 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		94624772207E8190002F85E6 /* IncidentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentTableViewCell.swift; sourceTree = "<group>"; };
+		94C62C87207F795A008F0CAB /* AddDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceViewController.swift; sourceTree = "<group>"; };
 		94FB77D1207E834B003EF1BC /* Incident.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incident.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +93,7 @@
 				94624765207E7A64002F85E6 /* IncidentListViewController.swift */,
 				94624767207E7A75002F85E6 /* ScanViewController.swift */,
 				944C624F207EB978003B732E /* DetailsViewController.swift */,
+				94C62C87207F795A008F0CAB /* AddDeviceViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -98,6 +103,7 @@
 			children = (
 				94624772207E8190002F85E6 /* IncidentTableViewCell.swift */,
 				944C6249207EA910003B732E /* ListItemTableViewCell.swift */,
+				944BE06C207F8A8A001377D0 /* AddDetailTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -199,7 +205,9 @@
 				944C624E207EAE1B003B732E /* Detail.swift in Sources */,
 				944C624A207EA910003B732E /* ListItemTableViewCell.swift in Sources */,
 				94624768207E7A75002F85E6 /* ScanViewController.swift in Sources */,
+				944BE06D207F8A8A001377D0 /* AddDetailTableViewCell.swift in Sources */,
 				94624773207E8190002F85E6 /* IncidentTableViewCell.swift in Sources */,
+				94C62C88207F795A008F0CAB /* AddDeviceViewController.swift in Sources */,
 				94FB77D2207E834B003EF1BC /* Incident.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +355,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YFA8B58ZM6;
 				INFOPLIST_FILE = "GCEC-LaptopSIO-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -365,6 +374,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YFA8B58ZM6;
 				INFOPLIST_FILE = "GCEC-LaptopSIO-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

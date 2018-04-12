@@ -13,6 +13,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     
     let cellIdentifier = "detailCell"
+    let showEditSegueIdentifier = "segueShowEdit"
     var incidentDetails = [Detail]()
     var _sentIncident: Incident!
     
@@ -57,15 +58,17 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func editButtonPressed(_ sender: Any) {
+        let edit = true
+        performSegue(withIdentifier: showEditSegueIdentifier, sender: edit)
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? AddDeviceViewController {
+            if let editBool = sender as? Bool {
+                destination.screenTypeEdit = editBool
+            }
+        }
+    }
 
 }

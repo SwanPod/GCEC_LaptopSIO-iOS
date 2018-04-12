@@ -7,26 +7,55 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ScanViewController: UIViewController {
 
+    @IBOutlet weak var cameraViewport: UIView!
+    
+    let showAddSegueIdentifier = "segueShowAdd"
+    
+    var captureSession: AVCaptureSession?
+    var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+    var input: AVCaptureDeviceInput?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)
+//
+//        do {
+//            input = try AVCaptureDeviceInput(device: captureDevice!)
+//        } catch {
+//            print(error)
+//        }
+//
+//        captureSession = AVCaptureSession()
+//        captureSession?.addInput(input!)
+//
+//        videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
+//        videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+//        videoPreviewLayer?.bounds = view.layer.bounds
+//        cameraViewport.layer.addSublayer(videoPreviewLayer!)
+//
+//        captureSession?.startRunning()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func addButtonPressed(_ sender: Any) {
+        let isEdit = false
+        performSegue(withIdentifier: showAddSegueIdentifier, sender: isEdit)
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? AddDeviceViewController {
+            if let isEditBool = sender as? Bool {
+                destination.screenTypeEdit = isEditBool
+            }
+        }
+    }
 
 }
