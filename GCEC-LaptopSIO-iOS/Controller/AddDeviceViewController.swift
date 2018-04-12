@@ -15,11 +15,13 @@ class AddDeviceViewController: UIViewController, UITableViewDelegate, UITableVie
     let cellIdentifier = "addDetailCell"
     let titles: [String] = ["Name", "Location", "Asset", "Type", "Model", "School"]
     var screenTypeEdit: Bool!
+    var editDetails: [Detail]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.allowsSelection = false
         
         if screenTypeEdit == true {
             lblScreenTitle.text = "Edit Device"
@@ -34,12 +36,16 @@ class AddDeviceViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return titles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? AddDetailTableViewCell {
-            
+        if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ListItemTableViewCell {
+            if screenTypeEdit == true {
+                cell.updateUIForEdit(detail: editDetails[indexPath.row])
+            } else {
+                cell.updateUIForAdd(title: titles[indexPath.row])
+            }
             return cell
         } else {
             return UITableViewCell()

@@ -30,6 +30,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.allowsSelection = false
         
         incidentDetails.append(Detail(title: "Name", detail: _sentIncident.name))
         incidentDetails.append(Detail(title: "Location", detail: _sentIncident.location))
@@ -67,6 +68,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         if let destination = segue.destination as? AddDeviceViewController {
             if let editBool = sender as? Bool {
                 destination.screenTypeEdit = editBool
+                destination.editDetails = incidentDetails
             }
         }
     }

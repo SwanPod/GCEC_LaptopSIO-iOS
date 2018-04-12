@@ -12,6 +12,7 @@ class ListItemTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblDetail: UILabel!
+    @IBOutlet weak var txtValue: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +25,15 @@ class ListItemTableViewCell: UITableViewCell {
     func updateUI(detail: Detail) {
         lblTitle.text = detail.title
         lblDetail.text = detail.detail
+    }
+    
+    func updateUIForEdit(detail: Detail) {
+        lblTitle.text = detail.title
+        txtValue.text = detail.detail
+    }
+    
+    func updateUIForAdd(title: String){
+        lblTitle.text = title
     }
 
 }
