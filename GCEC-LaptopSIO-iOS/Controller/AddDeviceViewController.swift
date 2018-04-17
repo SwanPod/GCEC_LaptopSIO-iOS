@@ -18,9 +18,12 @@ class AddDeviceViewController: UIViewController, UITableViewDelegate, UITableVie
     let pickerValuesSchool: [String] = ["GCIT", "BBE", "BBR", "BDC"]
     let pickerValuesLaptopModel: [String] = ["6465b", "645 G1", "645 G2", "x360"]
     let pickerValuesDesktopModel: [String] = ["6005", "6305"]
+    let pickerValuesType: [String] = ["Laptop", "Desktop"]
     let cellIdentifier = "addDetailCell"
     var screenTypeEdit: Bool!
     var editDetails: [Detail]!
+    var pickerType: String!
+    var pickerDeviceType: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,11 +47,15 @@ class AddDeviceViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func checkForButton(title: String) -> Bool {
-        if title == "Name"{
+        if title == "Name" || title == "Asset"{
             return false
         } else {
             return true
         }
+    }
+    
+    func doThing(detailType: String) -> String {
+        return "String"
     }
     
     @IBAction func pickerButtonClicked(_ sender: Any) {
@@ -63,15 +70,15 @@ class AddDeviceViewController: UIViewController, UITableViewDelegate, UITableVie
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ListItemTableViewCell {
             if screenTypeEdit == true {
                 if checkForButton(title: titles[indexPath.row]) == true {
-                    cell.updateUIForEditWithDetails(detail: editDetails[indexPath.row])
+                    cell.updateUIForEditWithButton(detail: editDetails[indexPath.row])
                 } else {
                     cell.updateUIForEdit(detail: editDetails[indexPath.row])
                 }
             } else {
                 if checkForButton(title: titles[indexPath.row]) == true {
-                    cell.updateUIForEditWithDetails(detail: editDetails[indexPath.row])
+                    cell.updateUIForAddWithButton(title: titles[indexPath.row])
                 } else {
-                     cell.updateUIForEdit(detail: editDetails[indexPath.row])
+                    cell.updateUIForAdd(title: titles[indexPath.row])
                 }
             }
             return cell
@@ -85,7 +92,25 @@ class AddDeviceViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 1
+        if pickerType == "Location"{
+            return pickerValuesLocation.count
+        } else if pickerType == "School" {
+            return pickerValuesSchool.count
+        } else if pickerType == "Type" {
+            return pickerValuesType.count
+        } else if pickerType == "Model"{
+            if pickerDeviceType == "Laptop"{
+                return pickerValuesLaptopModel.count
+            } else {
+                return pickerValuesDesktopModel.count
+            }
+        } else {
+            return 1
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return doThing(detailType: "String")
     }
 
 }

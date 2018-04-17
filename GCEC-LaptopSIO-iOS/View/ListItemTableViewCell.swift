@@ -35,20 +35,26 @@ class ListItemTableViewCell: UITableViewCell {
         txtValue.text = detail.detail
     }
     
-    func updateUIForEditWithButon(detail: Detail){
+    func updateUIForEditWithButon(detail: Detail) {
         btnPicker.isHidden = false
         txtValue.isHidden = true
         lblTitle.text = detail.title
     }
     
-    func updateUIForEditWithDetails(detail: Detail){
+    func updateUIForEditWithButton(detail: Detail) {
         btnPicker.isHidden = false
         txtValue.isHidden = true
         lblTitle.text = detail.title
         btnPicker.setTitle(detail.detail, for: .normal)
     }
     
-    func updateUIForAdd(title: String){
+    func updateUIForAdd(title: String) {
+        lblTitle.text = title
+    }
+    
+    func updateUIForAddWithButton(title: String) {
+        txtValue.isHidden = true
+        btnPicker.isHidden = false
         lblTitle.text = title
     }
 
