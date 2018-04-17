@@ -113,27 +113,52 @@
                                                     <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqw-pk-pbP">
+                                                    <rect key="frame" x="234" y="-15" width="133" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="133" id="tbs-x5-Zlq"/>
+                                                        <constraint firstAttribute="height" constant="30" id="yvg-Lh-NYg"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="17"/>
+                                                    <state key="normal" title="Select an Option"/>
+                                                    <connections>
+                                                        <action selector="pickerButtonClicked:" destination="jdm-lF-TQO" eventType="touchUpInside" id="afp-9A-FlS"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="eqw-pk-pbP" firstAttribute="centerY" secondItem="W6p-qU-tR2" secondAttribute="centerY" id="Twh-tX-MY4"/>
                                                 <constraint firstItem="3kA-Lf-aF1" firstAttribute="top" secondItem="W6p-qU-tR2" secondAttribute="topMargin" id="akO-xd-Rbv"/>
                                                 <constraint firstItem="Gou-Hm-vR0" firstAttribute="centerY" secondItem="W6p-qU-tR2" secondAttribute="centerY" id="apa-5B-dmm"/>
                                                 <constraint firstItem="3kA-Lf-aF1" firstAttribute="leading" secondItem="W6p-qU-tR2" secondAttribute="leadingMargin" id="bqc-zQ-fMY"/>
                                                 <constraint firstItem="3kA-Lf-aF1" firstAttribute="centerY" secondItem="W6p-qU-tR2" secondAttribute="centerY" id="eDx-nn-jf1"/>
                                                 <constraint firstItem="3kA-Lf-aF1" firstAttribute="bottom" secondItem="W6p-qU-tR2" secondAttribute="bottomMargin" id="hrc-qG-RNp"/>
                                                 <constraint firstAttribute="trailing" secondItem="Gou-Hm-vR0" secondAttribute="trailing" constant="8" id="n5J-rf-yxj"/>
+                                                <constraint firstAttribute="trailing" secondItem="eqw-pk-pbP" secondAttribute="trailing" constant="8" id="odi-p0-oUZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="btnPicker" destination="eqw-pk-pbP" id="I1W-xE-Gt2"/>
                                             <outlet property="lblTitle" destination="3kA-Lf-aF1" id="tb0-ZH-v95"/>
                                             <outlet property="txtValue" destination="Gou-Hm-vR0" id="qU1-1A-VL1"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCW-kS-ezS">
+                                <rect key="frame" x="0.0" y="402" width="375" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="Nrj-T6-dau"/>
+                                    <constraint firstAttribute="height" constant="216" id="UYq-hb-2FI"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="cq1-9v-AiN" firstAttribute="bottom" secondItem="Wpd-Fi-SLG" secondAttribute="bottom" id="0hu-n7-pX1"/>
+                            <constraint firstItem="yCW-kS-ezS" firstAttribute="leading" secondItem="cq1-9v-AiN" secondAttribute="leading" id="1Id-zs-7mI"/>
+                            <constraint firstItem="cq1-9v-AiN" firstAttribute="bottom" secondItem="yCW-kS-ezS" secondAttribute="bottom" id="3ag-4Y-RBJ"/>
+                            <constraint firstItem="yCW-kS-ezS" firstAttribute="trailing" secondItem="cq1-9v-AiN" secondAttribute="trailing" id="6bh-Bs-TGn"/>
                             <constraint firstAttribute="trailing" secondItem="Wpd-Fi-SLG" secondAttribute="trailing" id="AcF-iw-Y0M"/>
                             <constraint firstItem="Wpd-Fi-SLG" firstAttribute="leading" secondItem="cq1-9v-AiN" secondAttribute="leading" id="XZR-UC-m6i"/>
                             <constraint firstItem="Wpd-Fi-SLG" firstAttribute="top" secondItem="cq1-9v-AiN" secondAttribute="top" id="rHn-dW-a7O"/>
@@ -163,12 +188,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="lblScreenTitle" destination="7bY-Zb-A3J" id="eOm-id-wuD"/>
+                        <outlet property="pickerView" destination="yCW-kS-ezS" id="lS6-6k-6E9"/>
                         <outlet property="tableView" destination="Wpd-Fi-SLG" id="FxY-vY-sue"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2gw-ph-DKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2338" y="526"/>
+            <point key="canvasLocation" x="2336.8000000000002" y="525.78710644677665"/>
         </scene>
         <!--Incident List View Controller-->
         <scene sceneID="uLo-1T-Fh5">
@@ -351,6 +377,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozQ-4b-si3">
+                                                    <rect key="frame" x="164" y="7" width="46" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qh0-z2-oET">
                                                     <rect key="frame" x="15" y="13" width="33" height="20"/>
                                                     <autoresizingMask key="autoresizingMask"/>
@@ -368,13 +399,14 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="btnPicker" destination="ozQ-4b-si3" id="YhU-rr-K8d"/>
                                             <outlet property="lblDetail" destination="jUc-Db-xKi" id="i9Z-gt-RAu"/>
                                             <outlet property="lblTitle" destination="Qh0-z2-oET" id="L1O-jY-6Yn"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T1L-jc-pvK" customClass="BorderUIView" customModule="GCEC_LaptopSIO_iOS" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T1L-jc-pvK">
                                 <rect key="frame" x="0.0" y="578" width="375" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMd-u1-qKn">

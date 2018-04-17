@@ -13,9 +13,12 @@ class ListItemTableViewCell: UITableViewCell {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblDetail: UILabel!
     @IBOutlet weak var txtValue: UITextField!
+    @IBOutlet weak var btnPicker: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        btnPicker.isHidden = true
+        btnPicker.contentHorizontalAlignment = .right
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,6 +33,19 @@ class ListItemTableViewCell: UITableViewCell {
     func updateUIForEdit(detail: Detail) {
         lblTitle.text = detail.title
         txtValue.text = detail.detail
+    }
+    
+    func updateUIForEditWithButon(detail: Detail){
+        btnPicker.isHidden = false
+        txtValue.isHidden = true
+        lblTitle.text = detail.title
+    }
+    
+    func updateUIForEditWithDetails(detail: Detail){
+        btnPicker.isHidden = false
+        txtValue.isHidden = true
+        lblTitle.text = detail.title
+        btnPicker.setTitle(detail.detail, for: .normal)
     }
     
     func updateUIForAdd(title: String){

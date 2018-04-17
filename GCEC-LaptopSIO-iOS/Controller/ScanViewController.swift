@@ -9,36 +9,16 @@
 import UIKit
 import AVFoundation
 
-class ScanViewController: UIViewController {
+class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
     @IBOutlet weak var cameraViewport: UIView!
     
     let showAddSegueIdentifier = "segueShowAdd"
-    
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
-    var input: AVCaptureDeviceInput?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)
-//
-//        do {
-//            input = try AVCaptureDeviceInput(device: captureDevice!)
-//        } catch {
-//            print(error)
-//        }
-//
-//        captureSession = AVCaptureSession()
-//        captureSession?.addInput(input!)
-//
-//        videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
-//        videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-//        videoPreviewLayer?.bounds = view.layer.bounds
-//        cameraViewport.layer.addSublayer(videoPreviewLayer!)
-//
-//        captureSession?.startRunning()
     }
 
     override func didReceiveMemoryWarning() {
