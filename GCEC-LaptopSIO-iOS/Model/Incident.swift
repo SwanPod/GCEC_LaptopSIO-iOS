@@ -60,13 +60,23 @@ class Incident {
         }
     }
     
-    init(name: String, location: String, asset: String, deviceType: String, deviceModel: String, deviceSchool: String){
-        _name = name
-        _location = location
-        _asset = asset
-        _deviceType = deviceType
-        _deviceModel = deviceModel
-        _deviceSchool = deviceSchool
+//    init(name: String, location: String, asset: String, deviceType: String, deviceModel: String, deviceSchool: String){
+//        _name = name
+//        _location = location
+//        _asset = asset
+//        _deviceType = deviceType
+//        _deviceModel = deviceModel
+//        _deviceSchool = deviceSchool
+//    }
+    
+    init(dict: [String: String]) {
+        _name = dict["Name"]
+        _location = dict["Location"]
+        _asset = dict["Asset"]
+        _deviceType = dict["Type"]
+        _deviceModel = dict["Model"]
+        _deviceSchool = dict["School"]
+        
     }
     
 }

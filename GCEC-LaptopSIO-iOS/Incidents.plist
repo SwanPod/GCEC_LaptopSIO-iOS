@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Name</key>
+		<string>TI-1101-04</string>
+		<key>Location</key>
+		<string>Data Center</string>
+		<key>Asset</key>
+		<string>08317</string>
+		<key>Type</key>
+		<string>Laptop</string>
+		<key>Model</key>
+		<string>645</string>
+		<key>School</key>
+		<string>GCIT</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>CI-300-S03</string>
+		<key>Location</key>
+		<string>HP Service</string>
+		<key>Asset</key>
+		<string>09376</string>
+		<key>Type</key>
+		<string>Desktop</string>
+		<key>Model</key>
+		<string>6005</string>
+		<key>School</key>
+		<string>BDC</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>EI-W124-06</string>
+		<key>Location</key>
+		<string>Tech Office</string>
+		<key>Asset</key>
+		<string>02745</string>
+		<key>Type</key>
+		<string>Laptop</string>
+		<key>Model</key>
+		<string>G2 x360</string>
+		<key>School</key>
+		<string>BBE</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>RI-S103-24</string>
+		<key>Location</key>
+		<string>Tech Office</string>
+		<key>Asset</key>
+		<string>03415</string>
+		<key>Type</key>
+		<string>Laptop</string>
+		<key>Model</key>
+		<string>6465b</string>
+		<key>School</key>
+		<string>BBR</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>TI-1101-04</string>
+		<key>Location</key>
+		<string>Data Center</string>
+		<key>Asset</key>
+		<string>08317</string>
+		<key>Type</key>
+		<string>Laptop</string>
+		<key>Model</key>
+		<string>645</string>
+		<key>School</key>
+		<string>GCIT</string>
+	</dict>
+</array>
+</plist>

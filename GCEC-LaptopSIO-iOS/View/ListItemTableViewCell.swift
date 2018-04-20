@@ -48,6 +48,10 @@ class ListItemTableViewCell: UITableViewCell {
         btnPicker.setTitle(detail.detail, for: .normal)
     }
     
+    func updateFromPickerView(text: String) {
+        btnPicker.setTitle(text, for: .normal)
+    }
+    
     func updateUIForAdd(title: String) {
         lblTitle.text = title
     }
@@ -56,6 +60,10 @@ class ListItemTableViewCell: UITableViewCell {
         txtValue.isHidden = true
         btnPicker.isHidden = false
         lblTitle.text = title
+    }
+    
+    func getTitle() -> String {
+        return lblTitle.text!
     }
 
 }
