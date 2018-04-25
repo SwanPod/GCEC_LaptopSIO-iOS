@@ -16,6 +16,28 @@ class Util {
     let pickerValuesLaptopModel: [String] = ["6465b", "645 G1", "645 G2", "x360"]
     let pickerValuesDesktopModel: [String] = ["6005", "6305"]
     
+    func saveToFile(dict: [String:String]) {
+        
+    }
+    
+    fileprivate func loadData() -> [[String: String]] {
+        guard let path = Bundle.main.path(forResource: "Incidents", ofType: "plist"),
+            let items = NSArray(contentsOfFile: path) else {
+                return[[:]]
+        }
+        
+        return items as! [[String: String]]
+    }
+    
+    func loadDataIntoArray() -> [Incident] {
+        var incidents: [Incident] = []
+        for item in loadData() {
+            incidents.append(Incident(dict: item))
+        }
+        
+        return incidents
+    }
+    
     
     
 }

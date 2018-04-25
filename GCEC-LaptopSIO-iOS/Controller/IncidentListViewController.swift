@@ -14,6 +14,7 @@ class IncidentListViewController: UIViewController, UITableViewDelegate, UITable
     
     let cellIdentifier = "incidentCell"
     let detailsSegueIdentifier = "segueShowDetails"
+    let util: Util = Util()
     var incidents = [Incident]()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,30 +35,14 @@ class IncidentListViewController: UIViewController, UITableViewDelegate, UITable
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = 74
         
-        self.tableView.rowHeight = 74
-        
-        loadDataIntoArray()
+        incidents = util.loadDataIntoArray()
         
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    fileprivate func loadData() -> [[String: String]] {
-        guard let path = Bundle.main.path(forResource: "Incidents", ofType: "plist"),
-            let items = NSArray(contentsOfFile: path) else {
-                return[[:]]
-        }
-        
-        return items as! [[String: String]]
-    }
-    
-    func loadDataIntoArray() {
-        for item in loadData() {
-            incidents.append(Incident(dict: item))
-        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

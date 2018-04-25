@@ -18,6 +18,20 @@
 	</dict>
 	<dict>
 		<key>Name</key>
+		<string>TI-FAC-EHENNESS</string>
+		<key>Location</key>
+		<string>HP Service</string>
+		<key>Asset</key>
+		<string>09986</string>
+		<key>Type</key>
+		<string>Laptop</string>
+		<key>Model</key>
+		<string>360 11 G2</string>
+		<key>School</key>
+		<string>GCIT</string>
+	</dict>
+	<dict>
+		<key>Name</key>
 		<string>CI-300-S03</string>
 		<key>Location</key>
 		<string>HP Service</string>

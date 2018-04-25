@@ -10,14 +10,18 @@ import UIKit
 
 class AddDeviceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource{
 
+    //MARK: - Outlets
+    
     @IBOutlet weak var lblScreenTitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pickerView: UIPickerView!
     
+    //MARK: - Variables
+    
     let titles: [String] = ["Name", "Location", "Asset", "Type", "Model", "School"]
     let pickerValuesLocation: [String] = ["", "Data Center", "Tech Office", "HP Service"]
     let pickerValuesSchool: [String] = ["", "GCIT", "BBE", "BBR", "BDC", "Shady Lane", "Hubert Building"]
-    let pickerValuesLaptopModel: [String] = ["" ,"6465b", "645 G1", "645 G2", "x360"]
+    let pickerValuesLaptopModel: [String] = ["" ,"6465b", "645 G1", "645 G2", "360 11 G2"]
     let pickerValuesDesktopModel: [String] = ["" ,"6005", "6305"]
     let pickerValuesMonitorModel: [String] = ["" ,"VH236", "VH238"]
     let pickerValuesType: [String] = ["", "Laptop", "Desktop", "Monitor"]
@@ -51,6 +55,28 @@ class AddDeviceViewController: UIViewController, UITableViewDelegate, UITableVie
         super.didReceiveMemoryWarning()
     }
     
+    //MARK: - Actions
+    
+    @IBAction func pickerButtonClicked(_ sender: UIButton) {
+        btnToUpdate = sender
+        pickerType = titles[sender.tag]
+        pickerView.reloadAllComponents()
+        pickerView.isHidden = false
+    }
+    
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        var newIncident: [String:String]!
+        newIncident["Name"] = editDetails[0].detail
+        newIncident["Location"] = editDetails[1].detail
+        newIncident["Asset"] = editDetails[2].detail
+        newIncident["Type"] = editDetails[3].detail
+        newIncident["Model"] = editDetails[4].detail
+        newIncident["School"] = editDetails[5].detail
+        print(newIncident)
+    }
+    
+    //MARK: - Custom Functions
+    
     func checkForButton(title: String) -> Bool {
         if title == "Name" || title == "Asset" {
             return false
@@ -63,12 +89,7 @@ class AddDeviceViewController: UIViewController, UITableViewDelegate, UITableVie
         return "String"
     }
     
-    @IBAction func pickerButtonClicked(_ sender: UIButton) {
-        btnToUpdate = sender
-        pickerType = titles[sender.tag]
-        pickerView.reloadAllComponents()
-        pickerView.isHidden = false
-    }
+    //MARK: - Table View Functions
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return titles.count
@@ -95,6 +116,8 @@ class AddDeviceViewController: UIViewController, UITableViewDelegate, UITableVie
             return UITableViewCell()
         }
     }
+    
+    //MARK: - Picker View Functions
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

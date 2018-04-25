@@ -87,7 +87,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="addDetailCell" rowHeight="45" id="iWD-EB-SWY" customClass="ListItemTableViewCell" customModule="GCEC_LaptopSIO_iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="addDetailCell" rowHeight="45" id="iWD-EB-SWY" customClass="ListItemTableViewCell" customModule="GCEC_LaptopSIO_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iWD-EB-SWY" id="W6p-qU-tR2">
@@ -177,7 +177,11 @@
                                 <constraint firstItem="7bY-Zb-A3J" firstAttribute="centerY" secondItem="xOH-dx-aDi" secondAttribute="centerY" id="wbi-kw-Fwa"/>
                             </constraints>
                         </view>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="8k9-2c-Ief"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="8k9-2c-Ief">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="jdm-lF-TQO" id="ag5-Hb-Fdk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="lblScreenTitle" destination="7bY-Zb-A3J" id="eOm-id-wuD"/>
@@ -187,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2gw-ph-DKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2336.8000000000002" y="525.78710644677665"/>
+            <point key="canvasLocation" x="2229" y="586"/>
         </scene>
         <!--Incident List View Controller-->
         <scene sceneID="uLo-1T-Fh5">
@@ -201,7 +205,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="incidentCell" rowHeight="74" id="RIm-Mz-28a" customClass="IncidentTableViewCell" customModule="GCEC_LaptopSIO_iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="incidentCell" rowHeight="74" id="RIm-Mz-28a" customClass="IncidentTableViewCell" customModule="GCEC_LaptopSIO_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RIm-Mz-28a" id="yJ8-v1-QhX">
@@ -360,7 +364,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="415"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" textLabel="Qh0-z2-oET" detailTextLabel="jUc-Db-xKi" rowHeight="45" style="IBUITableViewCellStyleValue1" id="TX8-H5-hTg" customClass="ListItemTableViewCell" customModule="GCEC_LaptopSIO_iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" textLabel="Qh0-z2-oET" detailTextLabel="jUc-Db-xKi" rowHeight="45" style="IBUITableViewCellStyleValue1" id="TX8-H5-hTg" customClass="ListItemTableViewCell" customModule="GCEC_LaptopSIO_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TX8-H5-hTg" id="qDI-TX-jvY">

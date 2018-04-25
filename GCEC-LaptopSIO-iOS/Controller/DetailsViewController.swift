@@ -10,8 +10,12 @@ import UIKit
 
 class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    //MARK: - Outlets
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var btnSignOut: UIButton!
+    
+    //MARK: - Variables
     
     let cellIdentifier = "detailCell"
     let showEditSegueIdentifier = "segueShowEdit"
@@ -48,6 +52,8 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.didReceiveMemoryWarning()
     }
     
+    //MARK: - Table View Functions
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return incidentDetails.count
     }
@@ -61,11 +67,15 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
             return UITableViewCell()
         }
     }
+    
+    //MARK: - Actions
 
     @IBAction func editButtonPressed(_ sender: Any) {
         let edit = true
         performSegue(withIdentifier: showEditSegueIdentifier, sender: edit)
     }
+    
+    //MARK: - Segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? AddDeviceViewController {
