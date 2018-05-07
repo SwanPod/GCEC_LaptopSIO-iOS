@@ -26,5 +26,9 @@ class FilterTableViewCell: UITableViewCell {
     func updateUI(value: String) {
         lblTitle.text = value
     }
+    
+    func getTitle() -> String {
+        return lblTitle.text!
+    }
 
 }

@@ -12,6 +12,8 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     let filterCellIdentifier: String = "filterCell"
     var util: Util = Util()
+    var selectedFilters: [String]!
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -31,9 +33,22 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: filterCellIdentifier, for: indexPath) as? FilterTableViewCell {
             cell.updateUI(value: util.pickerValuesSchool[indexPath.row])
+            cell.accessoryType = .none
             return cell
         } else{
             return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let cell = tableView.cellForRow(at: indexPath) as? FilterTableViewCell
+        
+        if cell?.accessoryType == UITableViewCellAccessoryType.none {
+            cell?.accessoryType = .checkmark
+//            selectedFilters.append((cell?.getTitle())!)
+        } else {
+            cell?.accessoryType = .none
         }
     }
 }
