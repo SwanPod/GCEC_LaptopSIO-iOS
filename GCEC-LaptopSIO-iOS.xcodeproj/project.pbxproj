@@ -22,6 +22,8 @@
 		947827DC208906080096E0DF /* Incidents.plist in Resources */ = {isa = PBXBuildFile; fileRef = 947827DB208906080096E0DF /* Incidents.plist */; };
 		948DE7692086466B00059AB5 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948DE7682086466B00059AB5 /* Util.swift */; };
 		94C62C88207F795A008F0CAB /* AddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C62C87207F795A008F0CAB /* AddDeviceViewController.swift */; };
+		94E6460320A0D39E00640E8B /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6460220A0D39E00640E8B /* FilterViewController.swift */; };
+		94E6460520A0D6AC00640E8B /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6460420A0D6AC00640E8B /* FilterTableViewCell.swift */; };
 		94FB77D2207E834B003EF1BC /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB77D1207E834B003EF1BC /* Incident.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		947827DB208906080096E0DF /* Incidents.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Incidents.plist; sourceTree = "<group>"; };
 		948DE7682086466B00059AB5 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		94C62C87207F795A008F0CAB /* AddDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceViewController.swift; sourceTree = "<group>"; };
+		94E6460220A0D39E00640E8B /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		94E6460420A0D6AC00640E8B /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		94FB77D1207E834B003EF1BC /* Incident.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incident.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +102,7 @@
 				94624767207E7A75002F85E6 /* ScanViewController.swift */,
 				944C624F207EB978003B732E /* DetailsViewController.swift */,
 				94C62C87207F795A008F0CAB /* AddDeviceViewController.swift */,
+				94E6460220A0D39E00640E8B /* FilterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 			children = (
 				94624772207E8190002F85E6 /* IncidentTableViewCell.swift */,
 				944C6249207EA910003B732E /* ListItemTableViewCell.swift */,
+				94E6460420A0D6AC00640E8B /* FilterTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -216,9 +222,11 @@
 				944C6250207EB978003B732E /* DetailsViewController.swift in Sources */,
 				944C624E207EAE1B003B732E /* Detail.swift in Sources */,
 				944C624A207EA910003B732E /* ListItemTableViewCell.swift in Sources */,
+				94E6460320A0D39E00640E8B /* FilterViewController.swift in Sources */,
 				94624768207E7A75002F85E6 /* ScanViewController.swift in Sources */,
 				94624773207E8190002F85E6 /* IncidentTableViewCell.swift in Sources */,
 				948DE7692086466B00059AB5 /* Util.swift in Sources */,
+				94E6460520A0D6AC00640E8B /* FilterTableViewCell.swift in Sources */,
 				94C62C88207F795A008F0CAB /* AddDeviceViewController.swift in Sources */,
 				94FB77D2207E834B003EF1BC /* Incident.swift in Sources */,
 			);

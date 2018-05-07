@@ -72,19 +72,5 @@
 		<key>School</key>
 		<string>BBR</string>
 	</dict>
-	<dict>
-		<key>Name</key>
-		<string>TI-1101-04</string>
-		<key>Location</key>
-		<string>Data Center</string>
-		<key>Asset</key>
-		<string>08317</string>
-		<key>Type</key>
-		<string>Laptop</string>
-		<key>Model</key>
-		<string>645</string>
-		<key>School</key>
-		<string>GCIT</string>
-	</dict>
 </array>
 </plist>

@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kt2-VE-qas" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1285.5999999999999" y="419.64017991004499"/>
+            <point key="canvasLocation" x="1284" y="485"/>
         </scene>
         <!--Add Device View Controller-->
         <scene sceneID="ppU-h6-AzH">
@@ -191,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2gw-ph-DKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2229" y="586"/>
+            <point key="canvasLocation" x="2108" y="484"/>
         </scene>
         <!--Incident List View Controller-->
         <scene sceneID="uLo-1T-Fh5">
@@ -270,11 +270,11 @@
                     <navigationItem key="navigationItem" id="T2K-JI-oK3">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="xpz-jg-k9Z">
-                            <rect key="frame" x="60" y="7" width="200" height="30"/>
+                            <rect key="frame" x="114" y="7" width="92" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Devices" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCv-uh-um7">
-                                    <rect key="frame" x="58.5" y="4.5" width="83" height="20"/>
+                                    <rect key="frame" x="4.5" y="4.5" width="83" height="20"/>
                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -286,6 +286,11 @@
                                 <constraint firstItem="wCv-uh-um7" firstAttribute="centerY" secondItem="xpz-jg-k9Z" secondAttribute="centerY" id="Vi6-4U-HaZ"/>
                             </constraints>
                         </view>
+                        <barButtonItem key="rightBarButtonItem" title="Filter" style="plain" id="KPP-f3-oBe">
+                            <connections>
+                                <segue destination="0S6-0O-FH7" kind="show" id="Tcr-D7-bwc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="J46-5M-epV" id="UId-Fu-xVp"/>
@@ -294,7 +299,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5K-ie-6wW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1286" y="-245"/>
+            <point key="canvasLocation" x="1284.375" y="-245.07042253521126"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jLM-PI-REs">
@@ -350,7 +355,79 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Znh-oY-Het" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="524" y="419.64017991004499"/>
+            <point key="canvasLocation" x="523" y="485"/>
+        </scene>
+        <!--Filter View Controller-->
+        <scene sceneID="Ykm-uj-kmY">
+            <objects>
+                <viewController id="0S6-0O-FH7" customClass="FilterViewController" customModule="GCEC_LaptopSIO_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4T2-5C-zn7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CQc-qG-zDY">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="filterCell" editingAccessoryType="checkmark" textLabel="sy3-VM-wOJ" style="IBUITableViewCellStyleDefault" id="Q3i-o6-CU9" customClass="FilterTableViewCell" customModule="GCEC_LaptopSIO_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q3i-o6-CU9" id="zc2-K8-Smt">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sy3-VM-wOJ">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblTitle" destination="sy3-VM-wOJ" id="9EY-f0-7qJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jtr-7A-Ujv" firstAttribute="trailing" secondItem="CQc-qG-zDY" secondAttribute="trailing" id="0Ow-W4-FWS"/>
+                            <constraint firstItem="CQc-qG-zDY" firstAttribute="top" secondItem="Jtr-7A-Ujv" secondAttribute="top" id="3UM-Xl-k69"/>
+                            <constraint firstItem="CQc-qG-zDY" firstAttribute="leading" secondItem="Jtr-7A-Ujv" secondAttribute="leading" id="FEq-93-29O"/>
+                            <constraint firstItem="Jtr-7A-Ujv" firstAttribute="bottom" secondItem="CQc-qG-zDY" secondAttribute="bottom" id="mlz-uy-pK3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jtr-7A-Ujv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OBC-A9-d9M">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="B4n-Jt-NxY">
+                            <rect key="frame" x="95.5" y="7" width="129" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eq0-5G-MJj">
+                                    <rect key="frame" x="45.5" y="5" width="38" height="20"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Eq0-5G-MJj" firstAttribute="centerX" secondItem="B4n-Jt-NxY" secondAttribute="centerX" id="DxG-xH-LnY"/>
+                                <constraint firstItem="Eq0-5G-MJj" firstAttribute="centerY" secondItem="B4n-Jt-NxY" secondAttribute="centerY" id="TGC-2O-JWz"/>
+                            </constraints>
+                        </view>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="CQc-qG-zDY" id="Ybe-tX-aKC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TeZ-Ug-gyY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2108" y="-948"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="qRu-3Z-9qj">

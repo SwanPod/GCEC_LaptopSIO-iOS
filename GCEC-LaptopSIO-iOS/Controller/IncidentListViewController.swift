@@ -14,7 +14,7 @@ class IncidentListViewController: UIViewController, UITableViewDelegate, UITable
     
     let cellIdentifier = "incidentCell"
     let detailsSegueIdentifier = "segueShowDetails"
-    let util: Util = Util()
+    let util = Util()
     var incidents = [Incident]()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
